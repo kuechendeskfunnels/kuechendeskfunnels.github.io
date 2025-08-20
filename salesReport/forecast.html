@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KüchenDesk Vertriebsanalyse - Umsatzprognose</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: #fff;
+            padding: 40px;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .section-header {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            color: #203842;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .red-line {
+            width: 60px;
+            height: 3px;
+            background: #e3041c;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .metric-card {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 4px;
+            padding: 20px;
+            height: 120px;
+        }
+
+        .metric-label {
+            color: #6B7280;
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+
+        .metric-value {
+            color: #203842;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .metric-period {
+            color: #6B7280;
+            font-size: 12px;
+        }
+
+        .charts-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .chart-container {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 4px;
+            padding: 20px;
+        }
+
+        .chart-title {
+            color: #203842;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        canvas {
+            width: 100%;
+            height: 200px;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="section-header">
+        <h1 class="section-title">Umsatzprognose</h1>
+        <div class="red-line"></div>
+    </div>
+
+    <div class="metrics-grid">
+        <div class="metric-card">
+            <div class="metric-label">Prognostizierter Umsatz</div>
+            <div class="metric-value">{{projectedRevenue}}</div>
+            <div class="metric-period">12 Monate</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-label">Potentieller Umsatz</div>
+            <div class="metric-value">{{potentialRevenue}}</div>
+            <div class="metric-period">Basierend auf aktiven Leads</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-label">Gewichteter Umsatz</div>
+            <div class="metric-value">{{weightedRevenue}}</div>
+            <div class="metric-period">Nach Erfolgschancen gewichtet</div>
+        </div>
+    </div>
+
+    <div class="charts-grid">
+        <div class="chart-container">
+            <h3 class="chart-title">Umsatzentwicklung</h3>
+            <canvas id="revenueChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <h3 class="chart-title">Umsatz nach Erfolgschance</h3>
+            <canvas id="revenueByChanceChart"></canvas>
+        </div>
+    </div>
+
+    <script>
+        // Chart data will be injected here
+        const revenueData = {{revenueChartData}};
+        const chanceData = {{chanceChartData}};
+        
+        // Revenue Development Chart
+        new Chart(document.getElementById('revenueChart'), {
+            type: 'line',
+            data: {
+                labels: revenueData.labels,
+                datasets: [
+                    {
+                        label: 'Potentieller Umsatz',
+                        data: revenueData.potential,
+                        borderColor: '#4299e1',
+                        tension: 0.4
+                    },
+                    {
+                        label: 'Gewichteter Umsatz',
+                        data: revenueData.weighted,
+                        borderColor: '#48bb78',
+                        tension: 0.4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top'
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: value => value + ' €'
+                        }
+                    }
+                }
+            }
+        });
+
+        // Revenue by Success Chance Chart
+        new Chart(document.getElementById('revenueByChanceChart'), {
+            type: 'bar',
+            data: {
+                labels: chanceData.labels,
+                datasets: [{
+                    label: 'Potentieller Umsatz',
+                    data: chanceData.data,
+                    backgroundColor: '#e3041c'
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: value => value + ' €'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

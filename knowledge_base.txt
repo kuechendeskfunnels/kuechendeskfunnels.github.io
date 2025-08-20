@@ -1,0 +1,141 @@
+Hier ist ein ausführliches Dokument über **KüchenDesk**, das alle relevanten Informationen enthält, inklusive Details zur Funktionsweise, den Vorteilen und den Konditionen.  
+
+---
+
+# **KüchenDesk – Die digitale Betriebsorganisation für Küchenstudios**  
+**„Weniger Kopfschmerzen, mehr Cashflow“**  
+
+## **1. Einführung: Warum KüchenDesk?**  
+KüchenDesk ist eine speziell für Küchenstudios entwickelte ERP-Softwarelösung, die alle geschäftlichen Prozesse digitalisiert und optimiert – von der Kundenanfrage bis zur Rechnungsstellung. Die Software bietet eine zentrale Plattform für die Verwaltung von Aufträgen, Kunden, Bestellungen, Lagerbeständen, Finanzen und Teamkoordination.  
+
+Durch die Automatisierung vieler Routineaufgaben reduziert KüchenDesk Fehler, verbessert die Effizienz und schafft mehr Transparenz im Unternehmen. Die cloudbasierte Lösung ermöglicht den Zugriff von überall und sorgt für eine reibungslose Zusammenarbeit zwischen den verschiedenen Abteilungen eines Küchenstudios.  
+
+## **2. Die wichtigsten Funktionen von KüchenDesk**  
+
+### **2.1 Auftragsverwaltung**  
+- Zentrale Übersicht über alle Aufträge mit Echtzeit-Status.  
+- Integration mit Küchenplanungsprogrammen wie Carat, Winner Design, KPS Max und eOpus.  
+- Automatische Generierung von Bestellungen, Rechnungen und Lieferscheinen.  
+
+### **2.2 Kundenverwaltung**  
+- Vollständige Kundenhistorie mit allen relevanten Dokumenten, E-Mails und Notizen.  
+- Automatische Wiedervorlagen und Erinnerungen für Follow-ups.  
+- Kundenspezifische Angebote und Verträge direkt aus dem System heraus erstellen.  
+
+### **2.3 Lager- und Warenwirtschaft**  
+- Echtzeit-Bestandsverwaltung mit digitalem Abgleich von Bestellungen und Wareneingängen.  
+- Automatische Bestandsprüfung und Warnmeldungen bei niedrigen Lagerbeständen.  
+- Inventurunterstützung mit EAN-Code-Scanner für eine schnelle Erfassung.  
+
+### **2.4 Bestellmanagement & Wareneingang**  
+- Automatische Erstellung von Bestellungen mit direkter EDI-Anbindung zu Lieferanten.  
+- Digitaler Abgleich von Auftragsbestätigungen mit den ursprünglichen Bestellungen.  
+- Lückenlose Dokumentation von Wareneingängen zur Vermeidung von Differenzen.  
+
+### **2.5 Rechnungsstellung & Buchhaltung**  
+- Automatische Rechnungsstellung basierend auf abgeschlossenen Aufträgen.  
+- Zahlungsabgleich durch Verknüpfung mit dem Bankkonto.  
+- DATEV-Integration für eine direkte Übergabe an den Steuerberater.  
+- Überblick über offene, überfällige und bezahlte Rechnungen.  
+
+### **2.6 Dokumentenmanagement**  
+- Zentral gespeicherte Dokumente: Angebote, Skizzen, Kaufverträge, Rechnungen.  
+- Alle Dokumente sind digital durchsuchbar und mit einem Klick abrufbar.  
+- Automatische Archivierung von Kundenkommunikation per E-Mail.  
+
+### **2.7 Montage- und Terminverwaltung**  
+- Planung von Liefer- und Montageterminen mit direkter Synchronisation ins System.  
+- Monteure erhalten alle relevanten Auftragsdaten digital auf Tablet oder Smartphone.  
+- Nachweise für abgeschlossene Montagen mit digitalem Abnahmeprotokoll und Fotos.  
+
+### **2.8 Kundendienst & Reklamationsmanagement**  
+- Einfache Erfassung von Reklamationen durch Monteure per App.  
+- Sofortige Bearbeitung durch die Bestellabteilung für eine schnellere Lösung.  
+- Lückenlose Dokumentation aller Kundenanfragen und Servicefälle.  
+
+### **2.9 Reporting & Analyse**  
+- Echtzeit-Analysen zu Umsätzen, Kosten, Lieferantenstatistiken und mehr.  
+- Individuelle Berichtsfilter und anpassbare Dashboards.  
+- Klare Visualisierung wichtiger Kennzahlen inklusive Ampelfunktionen.  
+
+## **3. Die Vorteile von KüchenDesk**  
+
+### **3.1 Effizienzsteigerung**  
+✅ Schluss mit Papierchaos und fehleranfälligen Excel-Tabellen.  
+✅ Zentrale Aufgaben- und Terminverwaltung steigert die Produktivität.  
+✅ Automatisierte Prozesse reduzieren manuelle Arbeit.  
+
+### **3.2 Alle Daten an einem Ort**  
+✅ Zentrale Plattform für alle geschäftlichen Prozesse.  
+✅ Mobiler Zugriff für Monteure, Buchhaltung und Vertrieb.  
+✅ Individuell anpassbare Dashboards für unterschiedliche Nutzergruppen.  
+
+### **3.3 Kostenersparnis durch Automatisierung**  
+✅ Automatische Erstellung von Angeboten, Rechnungen und Protokollen.  
+✅ Automatisierter Zahlungsabgleich spart Zeit in der Buchhaltung.  
+✅ Echtzeit-Datenanalysen ermöglichen fundierte Geschäftsentscheidungen.  
+
+### **3.4 Bessere Kundenerfahrung**  
+✅ Kundenhistorie jederzeit abrufbar für schnellen Support.  
+✅ Push-Benachrichtigungen und Wiedervorlagen für schnellere Reaktionszeiten.  
+
+### **3.5 Zukunftssicherheit**  
+✅ Erfüllt die E-Rechnungspflicht 2025 (ZUGFeRD & XRechnung).  
+✅ Regelmäßige Updates für kontinuierliche Weiterentwicklung.  
+✅ EDI-Anbindung für schnelle und fehlerfreie Bestellprozesse.  
+
+## **4. Integration mit anderen Programmen**  
+
+### **Planungsprogramme**  
+✅ **Carat** (Freischaltung: 2.000 EUR)  
+✅ Winner Design & Flex  
+✅ KPS Max  
+✅ eOpus  
+
+### **E-Mail-Dienste**  
+✅ Standard (IMAP & SMTP)  
+✅ Microsoft 365  
+✅ Gmail  
+
+### **Buchhaltung & Steuerberatung**  
+✅ **DATEV** (Automatisierte Übergabe von Buchhaltungsdaten)  
+
+### **Montage & Reklamationen**  
+✅ **Hey.Kitchen** (Montageroutinen per App)  
+✅ **Snag Tal** (Reklamationsbearbeitung per App)  
+
+## **5. Kosten & Lizenzmodell**  
+
+### **5.1 Basislizenz** (Start)  
+💰 **149 EUR / Monat**  
+✅ **1 Vollnutzer** (mit vollem Funktionsumfang)  
+✅ **1 Teilnutzer** (z. B. für Monteure oder Lageristen)  
+✅ **1 Filiale** 
+
+### **5.2 Zusatzlizenzen**  (Optional)
+💰 **99 EUR / Monat** (pro zusätzlichem Vollnutzer inkl Teilnutzer)  
+💰 **25 EUR / Monat** (pro zusätzlichem Teilnutzer)  
+💰 **99 EUR / Monat** (pro zusätzliche Filiale)  
+
+### **5.3 Onboarding & Einrichtung** (Onboardingphase bis zu 6 Wochen)  
+📌 **Onboardinggebühr:**  
+- **900 EUR** für bis zu **3 Vollnutzer**  
+- **2000 EUR** für eine Datanmigration rückwirkend bis zu 3 Jahre
+- Beinhaltet Schulungen & Support.  
+
+📌 **Vertragslaufzeit:** **10 Monate** (Verkürzung auf 3 Monate nur in Ausnahmefällen).  
+
+## **6. Technische Anforderungen**  
+✅ **Browserbasiert:** Kein Download oder Installation erforderlich.  
+✅ **Automatische Updates & Wartung:** Keine IT-Kosten für eigene Server.  
+✅ **Cloud-Technologie:** Zugriff von überall, maximale Sicherheit.  
+
+## **7. KüchenDesk – Ihre Zukunft beginnt jetzt!**  
+🚀 **Über 300 Benutzer nutzen bereits KüchenDesk – seien Sie dabei!**  
+
+📞 **Kontakt:**  
+📧 E-Mail: [vertrieb@kuechendesk.de](mailto:vertrieb@kuechendesk.de)  
+🌍 Webseite: [www.kuechendesk.de](https://www.kuechendesk.de)  
+📞 Telefon: +49 30 75439460  
+
+📢 **Jetzt digitalisieren und langfristig erfolgreicher sein!** 🚀

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KüchenDesk Vertriebsanalyse - Performance</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: #fff;
+            padding: 40px;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .section-header {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            color: #203842;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .red-line {
+            width: 60px;
+            height: 3px;
+            background: #e3041c;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .metric-card {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 4px;
+            padding: 20px;
+        }
+
+        .metric-label {
+            color: #6B7280;
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+
+        .metric-value {
+            color: #203842;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .metric-trend {
+            color: #059669;
+            font-size: 12px;
+        }
+
+        .metric-trend.neutral {
+            color: #6B7280;
+        }
+
+        .charts-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .chart-container {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 4px;
+            padding: 20px;
+        }
+
+        .chart-title {
+            color: #203842;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        canvas {
+            width: 100%;
+            height: 200px;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="section-header">
+        <h1 class="section-title">Vertriebsperformance</h1>
+        <div class="red-line"></div>
+    </div>
+
+    <div class="metrics-grid">
+        <div class="metric-card">
+            <div class="metric-label">Gesamt Leads</div>
+            <div class="metric-value">{{totalLeads}}</div>
+            <div class="metric-trend">+{{totalLeadsTrend}}% vs. letzter Monat</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-label">Aktive Interessenten</div>
+            <div class="metric-value">{{activeLeads}}</div>
+            <div class="metric-trend">+{{activeLeadsTrend}}% vs. letzter Monat</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-label">Erfolgsquote</div>
+            <div class="metric-value">{{successRate}}%</div>
+            <div class="metric-trend neutral">Keine Änderung</div>
+        </div>
+        <div class="metric-card">
+            <div class="metric-label">Fällige Nachfassungen</div>
+            <div class="metric-value">{{followUps}}</div>
+            <div class="metric-trend neutral">Keine Änderung</div>
+        </div>
+    </div>
+
+    <div class="charts-grid">
+        <div class="chart-container">
+            <h3 class="chart-title">Lead Status Verteilung</h3>
+            <canvas id="statusDistributionChart"></canvas>
+        </div>
+        <div class="chart-container">
+            <h3 class="chart-title">Konversionsraten</h3>
+            <canvas id="conversionRateChart"></canvas>
+        </div>
+    </div>
+
+    <script>
+        // Chart data will be injected here
+        const statusData = {{statusChartData}};
+        const conversionData = {{conversionChartData}};
+        
+        // Status Distribution Chart
+        new Chart(document.getElementById('statusDistributionChart'), {
+            type: 'pie',
+            data: {
+                labels: statusData.labels,
+                datasets: [{
+                    data: statusData.data,
+                    backgroundColor: [
+                        '#e3041c', '#203842', '#4299e1', '#48bb78', 
+                        '#ed8936', '#667eea', '#9f7aea'
+                    ]
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'right',
+                        labels: {
+                            boxWidth: 12,
+                            padding: 15
+                        }
+                    }
+                }
+            }
+        });
+
+        // Conversion Rate Chart
+        new Chart(document.getElementById('conversionRateChart'), {
+            type: 'line',
+            data: {
+                labels: conversionData.labels,
+                datasets: [{
+                    label: 'Konversionsrate',
+                    data: conversionData.data,
+                    borderColor: '#e3041c',
+                    tension: 0.4,
+                    fill: true,
+                    backgroundColor: 'rgba(227, 4, 28, 0.1)'
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        ticks: {
+                            callback: value => value + '%'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
